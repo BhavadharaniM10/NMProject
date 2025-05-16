@@ -6,6 +6,7 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 import nltk
 from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
 import string
 import os
 
@@ -37,8 +38,7 @@ with open('tokenizer.pkl', 'rb') as handle:
 # Preprocessing function
 def preprocess_text(text):
     stop_words = set(stopwords.words('english'))
-    tokenizer = PunktWordTokenizer()
-    tokens = tokenizer.tokenize(text.lower())
+    tokens = word_tokenize(text.lower())
     tokens = [word for word in tokens if word not in stop_words and word not in string.punctuation]
     return ' '.join(tokens)
 
