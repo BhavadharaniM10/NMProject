@@ -4,3 +4,4 @@ services:
     env: python
     startCommand: python app.py
     plan: free
+    pythonVersion: 3.11.11
