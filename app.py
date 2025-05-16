@@ -6,7 +6,6 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 import nltk
 from nltk.corpus import stopwords
-from nltk.tokenize import PunktWordTokenizer
 import string
 import os
 
