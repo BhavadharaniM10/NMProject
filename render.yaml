@@ -2,6 +2,5 @@ services:
   - type: web
     name: fake-news-app
     env: python
-    buildCommand: ./setup.sh
     startCommand: python app.py
     plan: free
